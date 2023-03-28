@@ -14,6 +14,8 @@
     <a asp-controller="Events" asp-action="Delete">Delete Event</a>
 </p>
 
+
+
 @if (ViewBag.events.Count == 0)
 {
     <p>No events yet!</p>
@@ -38,6 +40,7 @@ else
                 <td>@evt.Id</td>
                 <td>@evt.Name</td>
                 <td>@evt.Description </td>
+                <td><a asp-controller="Events" asp-action="Edit" asp-route-id="@evt.Id">Edit Event</a></td>
             </tr>
         }
     </table>
