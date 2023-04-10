@@ -44,7 +44,7 @@ namespace CodingEvents.Controllers
         {
             if (ModelState.IsValid)
             {
-                EventCategory theCategory = context.Categories.Find(addEventViewModel.CategoryId);
+                EventCategory theCategory = context.Categories.Find(addEventViewModel.BunnyId);
                 Event newEvent = new Event
                 {
                     Name = addEventViewModel.Name,

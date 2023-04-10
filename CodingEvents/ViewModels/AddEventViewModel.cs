@@ -19,7 +19,7 @@ namespace CodingEvents.ViewModels
         public string ContactEmail { get; set; }
 
         [Required(ErrorMessage = "Category is required")]
-        public int CategoryId { get; set; }
+        public int BunnyId { get; set; }
 
         public List<SelectListItem>? Categories { get; set; }
 
@@ -27,13 +27,13 @@ namespace CodingEvents.ViewModels
         {
             Categories = new List<SelectListItem>();
 
-            foreach (var category in categories)
+            foreach (var bunny in categories)
             {
                 Categories.Add(
                     new SelectListItem
                     {
-                        Value = category.Id.ToString(),
-                        Text = category.Name
+                        Value = bunny.Id.ToString(),
+                        Text = bunny.Name
                     }
                 ); ;
             }

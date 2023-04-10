@@ -11,7 +11,7 @@ namespace CodingEvents.Models
 
         public EventCategory Category { get; set; }
 
-        public int CategoryId { get; set; }
+        public int BunnyId { get; set; }
 
         public int Id { get; set; }
 
