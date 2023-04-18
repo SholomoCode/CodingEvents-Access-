@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CodingEvents.Data;
 using CodingEvents.Models;
 using CodingEvents.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CodingEvents.Controllers
 {
+    [Authorize]
     public class EventsController : Controller
     {
         private EventDbContext context;
@@ -22,6 +24,7 @@ namespace CodingEvents.Controllers
         }
 
         // GET: /<controller>/
+        [AllowAnonymous]
         public IActionResult Index()
         {
             List<Event> events = context.Events
